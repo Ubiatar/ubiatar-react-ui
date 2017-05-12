@@ -2,9 +2,9 @@
   "name": "ubiatar-react-ui",
   "version": "1.0.0",
   "description": "Ubiatar browser client React Material UI",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "standard"
+    "build": "babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
@@ -24,9 +24,14 @@
   },
   "homepage": "https://github.com/Ubiatar/ubiatar-react-ui#readme",
   "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "material-ui": "^0.18.0",
     "react": "^15.5.4"
   },
   "peerDependencies": {
-    "react": "^15.5.4"
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-tap-event-plugin": "^2.0.1"
   }
 }
