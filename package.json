@@ -22,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/Ubiatar/ubiatar-react-ui/issues"
   },
-  "homepage": "https://github.com/Ubiatar/ubiatar-react-ui#readme"
+  "homepage": "https://github.com/Ubiatar/ubiatar-react-ui#readme",
+  "devDependencies": {
+    "react": "^15.5.4"
+  },
+  "peerDependencies": {
+    "react": "^15.5.4"
+  }
 }
