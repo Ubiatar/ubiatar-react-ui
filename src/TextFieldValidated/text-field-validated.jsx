@@ -44,8 +44,9 @@ const TextFieldValidated = React.createClass({
   },
   render () {
     let {textFieldProps, status} = this.props
+    let style = textFieldProps.fullWidth ? {width: '100%'} : {width: 'auto'}
     return (
-      <div className={css.root}>
+      <div className={css.root} style={style}>
         <TextField {...textFieldProps} />
         {
           this.renderIcon(status)
