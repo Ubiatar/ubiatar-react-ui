@@ -5,6 +5,7 @@
 import React, {PropTypes} from 'react'
 import {TextField, FontIcon, CircularProgress} from 'material-ui'
 import {FORM_INPUT_STATES} from '../misc.js'
+import css from './text-field-validated.scss'
 
 const TextFieldValidated = React.createClass({
   propTypes: {
