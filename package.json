@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "grunt && babel src --out-dir lib",
+    "dev": "parallelshell \"grunt dev\" \"babel src --out-dir lib -w\"",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -29,7 +30,9 @@
     "babel-preset-react": "^6.5.0",
     "grunt": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
     "material-ui": "^0.18.0",
+    "parallelshell": "^2.0.0",
     "react": "^15.5.4"
   },
   "peerDependencies": {
