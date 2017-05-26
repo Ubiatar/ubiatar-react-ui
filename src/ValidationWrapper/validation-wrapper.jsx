@@ -3,7 +3,7 @@
  */
 
 import React from 'react'
-import
+import PropTypes from 'prop-types'
 import {FontIcon, CircularProgress} from 'material-ui'
 import {FORM_INPUT_STATES} from '../misc.js'
 import css from './validation-wrapper.scss'
@@ -15,13 +15,8 @@ export default class ValidationWrapper extends React.Component {
 
   getDefaultProps () {
     return {
-      textFieldProps: {
-        floatingLabelText: '',
-        onChange: null,
-        errorText: '',
-        fullWidth: false,
-        defaultValue: ''
-      }
+      fullWidth: false,
+      status: FORM_INPUT_STATES.neutral
     }
   }
 
@@ -56,6 +51,7 @@ export default class ValidationWrapper extends React.Component {
   }
 }
 
-ValidationWrapper.propTypes = {
-
+ValidationWrapper.PropTypes = {
+  fullWidth: PropTypes.bool,
+  status: PropTypes.object
 }
