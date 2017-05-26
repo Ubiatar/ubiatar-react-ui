@@ -31,11 +31,11 @@ const TextFieldValidated = React.createClass({
   renderIcon (status) {
     switch (status) {
       case FORM_INPUT_STATES.success:
-        return <FontIcon className='material-icons'>done</FontIcon>
+        return <FontIcon className={`${css.success} material-icons`}>done</FontIcon>
       case FORM_INPUT_STATES.neutral:
-        return <FontIcon className='material-icons'>warning</FontIcon>
+        return <FontIcon className={`${css.warning} material-icons`}>warning</FontIcon>
       case FORM_INPUT_STATES.error:
-        return <FontIcon className='material-icons'>clear</FontIcon>
+        return <FontIcon className={`${css.error} material-icons`}>clear</FontIcon>
       case FORM_INPUT_STATES.loading:
         return <CircularProgress size={20} thickness={2}/>
       default:
