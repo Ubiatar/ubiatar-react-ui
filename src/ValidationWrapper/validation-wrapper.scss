@@ -3,6 +3,6 @@
 .root {
   @include display-flex();
   @include browserify(flex-direction, row);
-  @include browserify(align-items, flex-start);
-  @include browserify(justify-content, center);
+  @include browserify(align-items, center);
+  @include browserify(justify-content, flex-start);
 }

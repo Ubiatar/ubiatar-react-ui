@@ -23,11 +23,11 @@ export default class ValidationWrapper extends React.Component {
   renderIcon (status) {
     switch (status) {
       case FORM_INPUT_STATES.success:
-        return <FontIcon className='material-icons'>done</FontIcon>
+        return <FontIcon className={`${css.success} material-icons`}>done</FontIcon>
       case FORM_INPUT_STATES.neutral:
-        return <FontIcon className='material-icons'>warning</FontIcon>
+        return <FontIcon className={`${css.warning} material-icons`}>warning</FontIcon>
       case FORM_INPUT_STATES.error:
-        return <FontIcon className='material-icons'>clear</FontIcon>
+        return <FontIcon className={`${css.error} material-icons`}>clear</FontIcon>
       case FORM_INPUT_STATES.loading:
         return <CircularProgress size={20} thickness={2}/>
       default:
@@ -36,9 +36,9 @@ export default class ValidationWrapper extends React.Component {
   }
 
   render () {
-    const {textFieldProps, status} = this.props
+    const {fullWidth, status} = this.props
     const style = {
-      width: textFieldProps.fullWidth ? '100%' : 'auto'
+      width: fullWidth ? '100%' : 'auto'
     }
     return (
       <div className={css.root} style={style}>
