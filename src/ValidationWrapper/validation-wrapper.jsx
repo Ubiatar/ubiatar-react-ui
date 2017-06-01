@@ -36,8 +36,10 @@ export default class ValidationWrapper extends React.Component {
   }
 
   render () {
-    let {textFieldProps, status} = this.props
-    let style = textFieldProps.fullWidth ? {width: '100%'} : {width: 'auto'}
+    const {textFieldProps, status} = this.props
+    const style = {
+      width: textFieldProps.fullWidth ? '100%' : 'auto'
+    }
     return (
       <div className={css.root} style={style}>
         {
