@@ -40,14 +40,21 @@ export default class ValidationWrapper extends React.Component {
     const style = {
       width: fullWidth ? '100%' : 'auto'
     }
+    const childStyle = {
+      width: fullWidth ? 'calc(100% - 30px)' : 'auto'
+    }
     return (
       <div className={css.root} style={style}>
-        {
-          this.props.children
-        }
-        {
-          this.renderIcon(status)
-        }
+        <div className={css.flex}>
+          <div className={css.childContainer} style={childStyle}>
+            {
+              this.props.children
+            }
+          </div>
+          {
+            this.renderIcon(status)
+          }
+        </div>
       </div>
     )
   }

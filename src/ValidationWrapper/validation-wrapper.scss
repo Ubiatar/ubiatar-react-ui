@@ -1,8 +1,28 @@
 @import '../global.scss';
 
 .root {
-  @include display-flex();
-  @include browserify(flex-direction, row);
-  @include browserify(align-items, center);
-  @include browserify(justify-content, flex-start);
+  display: inline-block;
+  vertical-align: middle;
+
+  .flex {
+    @include display-flex();
+    @include browserify(flex-direction, row);
+    @include browserify(align-items, center);
+    @include browserify(justify-content, flex-start);
+    padding-bottom: 20px;
+
+    .childContainer {
+      max-width: calc(100% - 30px);
+    }
+
+    .success {
+      color: $successColor !important;
+    }
+    .warning {
+      color: $alertColor !important;
+    }
+    .error {
+      color: $errorColor !important;
+    }
+  }
 }
