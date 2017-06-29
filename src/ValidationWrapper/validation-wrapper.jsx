@@ -13,13 +13,6 @@ export default class ValidationWrapper extends React.Component {
     super(props)
   }
 
-  getDefaultProps () {
-    return {
-      fullWidth: false,
-      status: FORM_INPUT_STATES.neutral
-    }
-  }
-
   renderIcon (status) {
     switch (status) {
       case FORM_INPUT_STATES.success:
